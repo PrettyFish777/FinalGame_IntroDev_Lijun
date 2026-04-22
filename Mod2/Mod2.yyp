@@ -52,7 +52,6 @@
     {"id":{"name":"Red_jump","path":"sprites/Red_jump/Red_jump.yy",},"order":9,},
     {"id":{"name":"P_keys","path":"objects/P_keys/P_keys.yy",},"order":11,},
     {"id":{"name":"P_Red1","path":"sprites/P_Red1/P_Red1.yy",},"order":6,},
-    {"id":{"name":"Sprite32","path":"sprites/Sprite32/Sprite32.yy",},"order":18,},
     {"id":{"name":"PF","path":"sprites/PF/PF.yy",},"order":9,},
     {"id":{"name":"snd_warning","path":"sounds/snd_warning/snd_warning.yy",},"order":0,},
     {"id":{"name":"P_Green2","path":"sprites/P_Green2/P_Green2.yy",},"order":1,},
