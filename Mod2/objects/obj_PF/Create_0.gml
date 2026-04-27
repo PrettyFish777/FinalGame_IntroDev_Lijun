@@ -1,10 +1,10 @@
-// Visuals: Start invisible and scaled to zero
+//visual 
 image_xscale = 0;
 image_yscale = 0;
 visible = false; 
 
 
 
-// Logic: A flag to tell the platform when to pop up
+// A flag to tell the platform when to pop up
 spawned = false; 
-spawn_distance = 400; // How close player needs to be (in pixels)
+spawn_distance = 400; // How close player needs to be. 

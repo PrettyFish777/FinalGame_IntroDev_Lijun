@@ -1,16 +1,16 @@
 image_speed = 1; 
 
-// --- MOVEMENT SETTINGS ---
+//movement 
 walk_speed = 4;   // How fast you run
-jumps_max = 2;    // Double jump!
+jumps_max = 2;    // Double jump
 
-// --- STATE VARIABLES ---
+// state 
 jumps_left = jumps_max;
 color_timer = 180;
 current_color = "none"; 
 
-// --- FIXES ---
-mask_index = player; // Keeps collision box the same size always
+//collsion eehehehe 
+mask_index = player; // keeps collision box the same size always
 
 
 // cemara

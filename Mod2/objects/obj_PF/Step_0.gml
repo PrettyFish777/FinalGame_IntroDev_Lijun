@@ -1,4 +1,4 @@
-// 1. Check distance to player
+// Check distance to player
 if (!spawned && instance_exists(obj_player)) {
     if (distance_to_object(obj_player) < spawn_distance) {
         spawned = true;
@@ -6,7 +6,7 @@ if (!spawned && instance_exists(obj_player)) {
     }
 }
 
-// 2. The Pop-up Animation
+// The Pop-up Animation
 if (spawned) {
     // Smoothly scale up to 1 (0.1 is the speed)
     image_xscale = lerp(image_xscale, 1, 0.1);
