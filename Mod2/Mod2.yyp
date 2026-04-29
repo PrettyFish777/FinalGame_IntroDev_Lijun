@@ -16,7 +16,7 @@
     {"id":{"name":"Red_player","path":"sprites/Red_player/Red_player.yy",},"order":9,},
     {"id":{"name":"snd_Room2_Intro","path":"sounds/snd_Room2_Intro/snd_Room2_Intro.yy",},"order":1,},
     {"id":{"name":"spr_bg","path":"sprites/spr_bg/spr_bg.yy",},"order":8,},
-    {"id":{"name":"Room3","path":"rooms/Room3/Room3.yy",},"order":2,},
+    {"id":{"name":"chunk_1","path":"rooms/chunk_1/chunk_1.yy",},"order":2,},
     {"id":{"name":"P_Green3","path":"sprites/P_Green3/P_Green3.yy",},"order":2,},
     {"id":{"name":"obj_Green1","path":"objects/obj_Green1/obj_Green1.yy",},"order":5,},
     {"id":{"name":"snd_death","path":"sounds/snd_death/snd_death.yy",},"order":4,},
@@ -85,7 +85,7 @@
   "RoomOrderNodes": [
     {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
-    {"roomId":{"name":"Room3","path":"rooms/Room3/Room3.yy",},},
+    {"roomId":{"name":"chunk_1","path":"rooms/chunk_1/chunk_1.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},
