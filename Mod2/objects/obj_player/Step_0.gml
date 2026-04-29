@@ -1,8 +1,6 @@
 
 var _r = keyboard_check(ord("D")), _l = keyboard_check(ord("A")), _j = keyboard_check_pressed(vk_space);
 
-
-
 //timer - for color 
 if (--color_timer <= 0) {
     
@@ -24,7 +22,6 @@ if (--color_timer <= 0) {
 }
 
 
-
 // sound  
 if (color_timer == 120 || color_timer == 80 || color_timer == 40) {
     audio_play_sound(snd_warning, 1, false);
@@ -43,7 +40,7 @@ if (_v != noone) {
     var _n = object_get_name(_v.object_index);
     
     if (current_color == "none" || _v.object_index == obj_PF || _v.object_index == move_PF || string_pos(current_color, _n) > 0) {
-        // Use the specific object (_v) for the pixel-perfect snap
+        
         while (!place_meeting(x, y + sign(y_vel), _v)) y += sign(y_vel);
         y_vel = 0;
         jumps_left = jumps_max;
