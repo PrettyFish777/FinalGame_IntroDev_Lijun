@@ -27,3 +27,9 @@ next_color = "none"
 // keys 
 keys_collected = 0;
 keys_total = 3; // The number of keys needed to win
+
+
+// icons
+has_key1 = false;
+has_key2 = false;
+has_key3 = false;

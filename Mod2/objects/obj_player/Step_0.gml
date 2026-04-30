@@ -63,7 +63,7 @@ if (_h != noone) {
 }
 x += x_vel;
 
-//jumpong 
+//jumping 
 if (_j && jumps_left > 0) { 
     y_vel = bounce_vel; 
     jumps_left--; 
@@ -103,6 +103,19 @@ var _inst = instance_place(x, y, P_keys);
 if (_inst != noone) {
  
     audio_play_sound(snd_key_pickup, 1, false);
+	
+	if (_inst.object_index == obj_BlueKey) {
+        has_key1 = true;
+    }
+
+    if (_inst.object_index == obj_GreenKey) {
+        has_key2 = true;
+    }
+
+    if (_inst.object_index == obj_RedKey) {
+        has_key3 = true;
+    }
+
     
     keys_collected += 1;
     
