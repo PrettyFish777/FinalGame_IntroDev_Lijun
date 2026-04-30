@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "countdown",
-    "path": "folders/Sprites/countdown.yy",
+    "name": "Sprites",
+    "path": "folders/Sprites.yy",
   },
 }
