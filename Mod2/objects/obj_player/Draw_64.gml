@@ -1,24 +1,63 @@
+//if (color_timer <= 120) {
+//    var _seconds_display = ceil(color_timer / 40);
+    
+//    draw_set_halign(fa_center);
+//    draw_set_valign(fa_middle);
+    
+//    // UI Position
+//    var _ui_x = display_get_gui_width() / 2;
+//    var _ui_y = 50;
+    
+
+//    var _c = c_white; // Default for "none"
+//    if (next_color == "Red")   _c = c_red;
+//    if (next_color == "Green") _c = c_lime;
+//    if (next_color == "Blue")  _c = c_aqua;
+    
+
+//    draw_text_transformed_color(_ui_x, _ui_y, string(_seconds_display), 7, 7, 0, _c, _c, _c, _c, 1);
+//}
+
 if (color_timer <= 120) {
     var _seconds_display = ceil(color_timer / 40);
     
     draw_set_halign(fa_center);
     draw_set_valign(fa_middle);
     
-    // UI Position
     var _ui_x = display_get_gui_width() / 2;
     var _ui_y = 50;
-    
 
-    var _c = c_white; // Default for "none"
-    if (next_color == "Red")   _c = c_red;
-    if (next_color == "Green") _c = c_lime;
-    if (next_color == "Blue")  _c = c_aqua;
-    
+	var _spr = -1;
 
-    draw_text_transformed_color(_ui_x, _ui_y, string(_seconds_display), 7, 7, 0, _c, _c, _c, _c, 1);
+    if (next_color == "none") {
+			if (_seconds_display == 3) _spr = W_3;
+            if (_seconds_display == 2) _spr = W_2;
+            if (_seconds_display == 1) _spr = W_1;
+
+    }
+
+    if (next_color == "Red") {
+            if (_seconds_display == 3) _spr = R_3;
+            if (_seconds_display == 2) _spr = R_2;
+            if (_seconds_display == 1) _spr = R_1;
+    }
+
+    if (next_color == "Green") {
+            if (_seconds_display == 3) _spr = G_3;
+            if (_seconds_display == 2) _spr = G_2;
+            if (_seconds_display == 1) _spr = G_1;
+    }
+
+    if (next_color == "Blue") {
+            if (_seconds_display == 3) _spr = B_3;
+            if (_seconds_display == 2) _spr = B_2;
+            if (_seconds_display == 1) _spr = B_1;
+    }
+
+    if (_spr != -1) {
+            draw_sprite_ext(_spr, 0, _ui_x, _ui_y, 1.5, 1.5, 0, c_white, 1);
+    }
 }
-
-
 
 //// Key counter
 
@@ -35,7 +74,8 @@ if (color_timer <= 120) {
 
 
 
-var icon_y = 60; // 在 key 下面一点
+//左上角瓶子
+var icon_y = 60; 
 var icon_gap = 100;
 var icon_scale = 1.7; 
 
@@ -48,7 +88,7 @@ var icon3_x = icon2_x + icon_gap;
 if (has_key1) {
     draw_sprite_ext(Blue_Key, 0, icon1_x, icon_y, icon_scale, icon_scale, 0, c_white, 1);
 } else {
-    draw_sprite_ext(B_key_grey, 0, icon1_x, icon_y, icon_scale, icon_scale, 0, c_gray, 1);
+    draw_sprite_ext(B_key_grey, 0, icon1_x, icon_y, icon_scale, icon_scale, 0,c_white, 1);
 }
 
 
@@ -56,7 +96,7 @@ if (has_key1) {
 if (has_key2) {
     draw_sprite_ext(Green_Key, 0, icon2_x, icon_y, icon_scale, icon_scale, 0, c_white, 1);
 } else {
-    draw_sprite_ext(G_key_grey, 0, icon2_x, icon_y, icon_scale, icon_scale, 0, c_gray, 1);
+    draw_sprite_ext(G_key_grey, 0, icon2_x, icon_y, icon_scale, icon_scale, 0, c_white, 1);
 }
 
 
@@ -64,5 +104,5 @@ if (has_key2) {
 if (has_key3) {
     draw_sprite_ext(Red_Key, 0, icon3_x, icon_y, icon_scale, icon_scale, 0, c_white, 1);
 } else {
-    draw_sprite_ext(R_key_grey, 0, icon3_x, icon_y, icon_scale, icon_scale, 0, c_gray, 1);
+    draw_sprite_ext(R_key_grey, 0, icon3_x, icon_y, icon_scale, icon_scale, 0, c_white, 1);
 }
