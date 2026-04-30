@@ -35,7 +35,8 @@ if (color_timer <= 120) {
 
 
 
-var icon_y = 60; // 在 key 下面一点
+//左上角瓶子
+var icon_y = 60; 
 var icon_gap = 100;
 var icon_scale = 1.7; 
 
@@ -48,7 +49,7 @@ var icon3_x = icon2_x + icon_gap;
 if (has_key1) {
     draw_sprite_ext(Blue_Key, 0, icon1_x, icon_y, icon_scale, icon_scale, 0, c_white, 1);
 } else {
-    draw_sprite_ext(B_key_grey, 0, icon1_x, icon_y, icon_scale, icon_scale, 0, c_gray, 1);
+    draw_sprite_ext(B_key_grey, 0, icon1_x, icon_y, icon_scale, icon_scale, 0,c_white, 1);
 }
 
 
@@ -56,7 +57,7 @@ if (has_key1) {
 if (has_key2) {
     draw_sprite_ext(Green_Key, 0, icon2_x, icon_y, icon_scale, icon_scale, 0, c_white, 1);
 } else {
-    draw_sprite_ext(G_key_grey, 0, icon2_x, icon_y, icon_scale, icon_scale, 0, c_gray, 1);
+    draw_sprite_ext(G_key_grey, 0, icon2_x, icon_y, icon_scale, icon_scale, 0, c_white, 1);
 }
 
 
@@ -64,5 +65,5 @@ if (has_key2) {
 if (has_key3) {
     draw_sprite_ext(Red_Key, 0, icon3_x, icon_y, icon_scale, icon_scale, 0, c_white, 1);
 } else {
-    draw_sprite_ext(R_key_grey, 0, icon3_x, icon_y, icon_scale, icon_scale, 0, c_gray, 1);
+    draw_sprite_ext(R_key_grey, 0, icon3_x, icon_y, icon_scale, icon_scale, 0, c_white, 1);
 }
