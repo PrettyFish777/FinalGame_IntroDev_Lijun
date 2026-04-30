@@ -20,15 +20,49 @@ if (color_timer <= 120) {
 
 
 
-// Key counter
+//// Key counter
 
-draw_set_halign(fa_left);
-draw_set_font(fnt_gui); 
-var _str = "Keys: " + string(keys_collected) + " / " + string(keys_total);
+//draw_set_halign(fa_left);
+//draw_set_font(fnt_gui); 
+//var _str = "Keys: " + string(keys_collected) + " / " + string(keys_total);
 
 
-draw_text_color(44, 44, _str, c_black, c_black, c_black, c_black, 1);
-draw_text_color(40, 40, _str, c_yellow, c_yellow, c_yellow, c_yellow, 1);
+//draw_text_color(44, 44, _str, c_black, c_black, c_black, c_black, 1);
+//draw_text_color(40, 40, _str, c_yellow, c_yellow, c_yellow, c_yellow, 1);
 
-// reset. 
-draw_set_font(-1);
+//// reset. 
+//draw_set_font(-1);
+
+
+
+var icon_y = 60; // 在 key 下面一点
+var icon_gap = 100;
+var icon_scale = 1.7; 
+
+var icon1_x = 40;
+var icon2_x = icon1_x + icon_gap;
+var icon3_x = icon2_x + icon_gap;
+
+
+// icon 1
+if (has_key1) {
+    draw_sprite_ext(Blue_Key, 0, icon1_x, icon_y, icon_scale, icon_scale, 0, c_white, 1);
+} else {
+    draw_sprite_ext(B_key_grey, 0, icon1_x, icon_y, icon_scale, icon_scale, 0, c_gray, 1);
+}
+
+
+// icon 2
+if (has_key2) {
+    draw_sprite_ext(Green_Key, 0, icon2_x, icon_y, icon_scale, icon_scale, 0, c_white, 1);
+} else {
+    draw_sprite_ext(G_key_grey, 0, icon2_x, icon_y, icon_scale, icon_scale, 0, c_gray, 1);
+}
+
+
+// icon 3
+if (has_key3) {
+    draw_sprite_ext(Red_Key, 0, icon3_x, icon_y, icon_scale, icon_scale, 0, c_white, 1);
+} else {
+    draw_sprite_ext(R_key_grey, 0, icon3_x, icon_y, icon_scale, icon_scale, 0, c_gray, 1);
+}
