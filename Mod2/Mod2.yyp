@@ -85,11 +85,11 @@
     "children": [],
   },
   "RoomOrderNodes": [
+    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
+    {"roomId":{"name":"chunk_2","path":"rooms/chunk_2/chunk_2.yy",},},
     {"roomId":{"name":"chunk_3","path":"rooms/chunk_3/chunk_3.yy",},},
     {"roomId":{"name":"chunk_1","path":"rooms/chunk_1/chunk_1.yy",},},
-    {"roomId":{"name":"Room1","path":"rooms/Room1/Room1.yy",},},
     {"roomId":{"name":"Room2","path":"rooms/Room2/Room2.yy",},},
-    {"roomId":{"name":"chunk_2","path":"rooms/chunk_2/chunk_2.yy",},},
   ],
   "Folders": [
     {"resourceType":"GMFolder","resourceVersion":"1.0","name":"Animation Curves","folderPath":"folders/Animation Curves.yy","order":12,},
