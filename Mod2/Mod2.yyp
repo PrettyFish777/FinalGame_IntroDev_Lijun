@@ -17,6 +17,7 @@
     {"id":{"name":"W_1","path":"sprites/W_1/W_1.yy",},"order":3,},
     {"id":{"name":"B_key_grey","path":"sprites/B_key_grey/B_key_grey.yy",},"order":7,},
     {"id":{"name":"Blue_jump","path":"sprites/Blue_jump/Blue_jump.yy",},"order":12,},
+    {"id":{"name":"roket","path":"sprites/roket/roket.yy",},"order":10,},
     {"id":{"name":"P_Blue2","path":"sprites/P_Blue2/P_Blue2.yy",},"order":4,},
     {"id":{"name":"Red_player","path":"sprites/Red_player/Red_player.yy",},"order":9,},
     {"id":{"name":"snd_Room2_Intro","path":"sounds/snd_Room2_Intro/snd_Room2_Intro.yy",},"order":1,},

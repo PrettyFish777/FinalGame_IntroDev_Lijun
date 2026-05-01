@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "move_PF",
   "spriteId": {
-    "name": "PF",
-    "path": "sprites/PF/PF.yy",
+    "name": "roket",
+    "path": "sprites/roket/roket.yy",
   },
   "solid": false,
   "visible": true,
