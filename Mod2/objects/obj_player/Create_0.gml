@@ -33,3 +33,5 @@ keys_total = 3; // The number of keys needed to win
 has_key1 = false;
 has_key2 = false;
 has_key3 = false;
+
+colliderList = ds_list_create();

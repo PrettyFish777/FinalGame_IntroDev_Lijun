@@ -2,10 +2,19 @@ var _r = keyboard_check(ord("D"));
 var _l = keyboard_check(ord("A"));
 var _j = keyboard_check_pressed(vk_space);
 
+for (var i = ds_list_size(colliderList) - 1; i >= 0; i--) {
+    if (!place_meeting(x, y, colliderList[| i])) {
+        ds_list_delete(colliderList, i);
+    }
+}
 
 // timer - for color 
 if (--color_timer <= 0) {
-    
+	
+	ds_list_destroy(colliderList);
+	colliderList = ds_list_create();
+	instance_place_list(x, y, collider, colliderList, true);
+	
     current_color = next_color;
  
     color_timer = room_speed * random_range(3, 6);
@@ -33,39 +42,39 @@ y_vel += grav;
 
 
 // --- VERTICAL COLLISION ---
-var _v = instance_place(x, y + y_vel, obj_PF);
-if (_v == noone) _v = instance_place(x, y + y_vel, move_PF); 
+var _v = instance_place(x, y + y_vel, move_PF); // Prioritize move_PF because move_PF always causes a collision
+if (_v == noone) { _v = instance_place(x, y + y_vel, obj_PF); }
 
-if (_v != noone) {
-    var _n = object_get_name(_v.object_index);
+if (_v != noone && (ds_list_find_index(colliderList, _v) == -1)) {
 
-    if (
-        current_color == "none" ||
-        _v.object_index == obj_PF ||
-        _v.object_index == move_PF ||
-        string_pos(current_color, _n) > 0
-    ) {
-        while (!place_meeting(x, y + sign(y_vel), _v)) {
-            y += sign(y_vel);
-        }
+	var _n = object_get_name(_v.object_index);
 
-        y_vel = 0;
-        jumps_left = jumps_max;
-    }
+	if (current_color == "none" ||
+	    _v.object_index == obj_PF ||
+	    _v.object_index == move_PF ||
+	    string_pos(current_color, _n) > 0
+	) {
+	    while (!place_meeting(x, y + sign(y_vel), _v)) {
+	        y += sign(y_vel);
+	    }
+		
+		if (y_vel > 0) { jumps_left = jumps_max; }
+
+		y_vel = 0;
+	}
 }
 
 y += y_vel;
 
 
 // --- HORIZONTAL COLLISION ---
-var _h = instance_place(x + x_vel, y, obj_PF);
-if (_h == noone) _h = instance_place(x + x_vel, y, move_PF);
+var _h = instance_place(x + x_vel, y, move_PF);
+if (_h == noone) _h = instance_place(x + x_vel, y, obj_PF);
 
-if (_h != noone) {
+if (_h != noone && (ds_list_find_index(colliderList, _v) == -1)) {
     var _nh = object_get_name(_h.object_index);
 
-    if (
-        current_color == "none" ||
+    if (current_color == "none" ||
         _h.object_index == obj_PF ||
         _h.object_index == move_PF ||
         string_pos(current_color, _nh) > 0
@@ -82,9 +91,9 @@ x += x_vel;
 
 
 // jumping 
-if (_j && jumps_left > 0) { 
+if (_j && (jumps_left > 0)) { 
     y_vel = bounce_vel; 
-    jumps_left--; 
+    jumps_left--;
 }
 
 

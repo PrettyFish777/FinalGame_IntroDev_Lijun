@@ -1,7 +1,7 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_blue3",
+  "name": "obj_Blue3",
   "spriteId": {
     "name": "P_Blue3",
     "path": "sprites/P_Blue3/P_Blue3.yy",

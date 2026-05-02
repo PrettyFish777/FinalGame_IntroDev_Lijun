@@ -10,4 +10,4 @@ timer = 0;           // Internal clock for the math
 start_x = x;
 start_y = y;
 
-
+validCollider = true;

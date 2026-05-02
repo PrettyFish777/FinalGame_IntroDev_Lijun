@@ -11,7 +11,10 @@
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": null,
+  "parentObjectId": {
+    "name": "collider",
+    "path": "objects/collider/collider.yy",
+  },
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,

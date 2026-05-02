@@ -1,20 +1,14 @@
 {
   "resourceType": "GMObject",
   "resourceVersion": "1.0",
-  "name": "obj_Blue1",
-  "spriteId": {
-    "name": "P_Blue1",
-    "path": "sprites/P_Blue1/P_Blue1.yy",
-  },
+  "name": "collider",
+  "spriteId": null,
   "solid": false,
   "visible": true,
   "managed": true,
   "spriteMaskId": null,
   "persistent": false,
-  "parentObjectId": {
-    "name": "obj_PF",
-    "path": "objects/obj_PF/obj_PF.yy",
-  },
+  "parentObjectId": null,
   "physicsObject": false,
   "physicsSensor": false,
   "physicsShape": 1,
@@ -29,9 +23,7 @@
   "physicsShapePoints": [],
   "eventList": [],
   "properties": [],
-  "overriddenProperties": [
-    {"resourceType":"GMOverriddenProperty","resourceVersion":"1.0","name":"","propertyId":{"name":"validCollider","path":"objects/obj_PF/obj_PF.yy",},"objectId":{"name":"obj_PF","path":"objects/obj_PF/obj_PF.yy",},"value":"True",},
-  ],
+  "overriddenProperties": [],
   "parent": {
     "name": "Objects",
     "path": "folders/Objects.yy",
