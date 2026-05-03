@@ -42,53 +42,19 @@ y_vel += grav;
 
 
 // --- VERTICAL COLLISION ---
-var _v = instance_place(x, y + y_vel, move_PF); // Prioritize move_PF because move_PF always causes a collision
-if (_v == noone) { _v = instance_place(x, y + y_vel, obj_PF); }
-
-if (_v != noone && (ds_list_find_index(colliderList, _v) == -1)) {
-
-	var _n = object_get_name(_v.object_index);
-
-	if (current_color == "none" ||
-	    _v.object_index == obj_PF ||
-	    _v.object_index == move_PF ||
-	    string_pos(current_color, _n) > 0
-	) {
-	    while (!place_meeting(x, y + sign(y_vel), _v)) {
-	        y += sign(y_vel);
-	    }
-		
-		if (y_vel > 0) { jumps_left = jumps_max; }
-
-		y_vel = 0;
-	}
+if (check_player_collision(id, x, y+y_vel)) {
+	if (y_vel > 0) { jumps_left = jumps_max; }
+	y_vel = 0;
 }
-
-y += y_vel;
-
 
 // --- HORIZONTAL COLLISION ---
-var _h = instance_place(x + x_vel, y, move_PF);
-if (_h == noone) _h = instance_place(x + x_vel, y, obj_PF);
-
-if (_h != noone && (ds_list_find_index(colliderList, _v) == -1)) {
-    var _nh = object_get_name(_h.object_index);
-
-    if (current_color == "none" ||
-        _h.object_index == obj_PF ||
-        _h.object_index == move_PF ||
-        string_pos(current_color, _nh) > 0
-    ) {
-        while (!place_meeting(x + sign(x_vel), y, _h)) {
-            x += sign(x_vel);
-        }
-
-        x_vel = 0;
-    }
+if (check_player_collision(id, x+x_vel, y)) {
+	x_vel = 0;
 }
 
+// move
+y += y_vel;
 x += x_vel;
-
 
 // jumping 
 if (_j && (jumps_left > 0)) { 
