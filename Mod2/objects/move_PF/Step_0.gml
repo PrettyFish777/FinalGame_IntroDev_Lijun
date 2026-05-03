@@ -10,16 +10,13 @@ var _h_speed = x - _old_x;
 var _p = instance_place(x, y - 2, obj_player);
 
 if (_p != noone) {
-    // We REMOVED the color check here so it works for ALL colors
     with(_p) {
         // Only move the player if they aren't about to hit a wall
-        if (!place_meeting(x + _h_speed, y, obj_PF)) {
+        if (!check_player_collision(id, x + _h_speed, y)) {
             x += _h_speed;
         }
     }
 }
-
-
 
 /*
 // --- 逻辑 1：捕捉家在哪里 ---
