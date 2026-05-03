@@ -1,4 +1,4 @@
-
+/*
 // --- SETTINGS ---
 move_speed = 0.02;   // How fast it moves (smaller is slower)
 move_range = 230;    // How many pixels it travels left/right
@@ -10,9 +10,10 @@ start_y = y;
 
 validCollider = true;
 
+show_debug_message("rocket created at x="+string(x)+", y="+string(y));
+*/
 
 
-/*
 // --- SETTINGS ---
 move_speed = 0.02;   
 move_range = 230;    
@@ -24,12 +25,3 @@ start_y = 0;
 initialized = false; 
 
 validCollider = true;
-
-// 告诉 Sequence：这个实例的坐标，别听 Sequence 的，听它自己代码的
-// element_id 是内置变量，代表当前物体在 Sequence 中的身份
-if (variable_instance_exists(self, "element_id")) {
-    layer_sequence_instance_override_object(layer_sequence_get_instance(self.element_id), object_index, self.id);
-}
-
-
-/*

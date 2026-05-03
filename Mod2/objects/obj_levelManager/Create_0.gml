@@ -12,6 +12,7 @@ scr_spawn_chunk = function() {
         // 创建 Sequence 并获取它的 ID
         var _new_seq = layer_sequence_create(_lay_id, next_spawn_x, 0, _selected);
         
+		/*
         // 【新增代码】强制刷新 Sequence 的播放状态
         layer_sequence_headpos(_new_seq, 0); 
         layer_sequence_play(_new_seq);
@@ -21,13 +22,8 @@ scr_spawn_chunk = function() {
 		var _instances = layer_sequence_get_instance(_new_seq);
 		// 强制让 Sequence 处于播放状态
 		layer_sequence_play(_new_seq);
-
+		*/
     }
     
     next_spawn_x += chunk_width;
 }
-
-
-// 【临时修改】把开局生成的 repeat 删掉或注释掉
-// 这样游戏启动时，除了你手动摆的 Room1，什么都不会有多
-// repeat(1) { scr_spawn_chunk(); }
