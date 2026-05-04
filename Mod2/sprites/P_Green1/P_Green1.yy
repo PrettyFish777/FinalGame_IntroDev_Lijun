@@ -3,7 +3,7 @@
   "resourceVersion": "1.0",
   "name": "P_Green1",
   "bboxMode": 0,
-  "collisionKind": 1,
+  "collisionKind": 2,
   "type": 0,
   "origin": 0,
   "preMultiplyAlpha": false,
