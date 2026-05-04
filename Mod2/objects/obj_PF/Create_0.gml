@@ -10,3 +10,4 @@ spawned = false;
 spawn_distance = 400; // How close player needs to be. 
 
 validCollider = true;
+
