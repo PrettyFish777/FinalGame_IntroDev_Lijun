@@ -29,6 +29,8 @@
   "gridY": 0,
   "frames": [
     {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0479b0ed-c783-4095-899d-bb0eb2d70452",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"558b0fbb-f01a-48f3-a555-28a28e5ece5f",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c24c4aee-ab2a-48e9-95a6-b7376ba4188e",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -36,16 +38,18 @@
     "name": "Red_Key",
     "timeUnits": 1,
     "playback": 1,
-    "playbackSpeed": 30.0,
+    "playbackSpeed": 7.0,
     "playbackSpeedType": 0,
     "autoRecord": true,
     "volume": 1.0,
-    "length": 1.0,
+    "length": 3.0,
     "events": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MessageEventKeyframe>",},
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
             {"id":"49e90d38-7aa0-4ed0-9d66-5864f1fb30a5","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0479b0ed-c783-4095-899d-bb0eb2d70452","path":"sprites/Red_Key/Red_Key.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"2c4e1715-63b2-4a95-a567-f80b2cea6b74","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"558b0fbb-f01a-48f3-a555-28a28e5ece5f","path":"sprites/Red_Key/Red_Key.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"22c0c931-6b18-41be-8cfd-24056e117666","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"c24c4aee-ab2a-48e9-95a6-b7376ba4188e","path":"sprites/Red_Key/Red_Key.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
